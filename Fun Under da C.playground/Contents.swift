@@ -33,9 +33,44 @@ func simpleMethoud(numberOfThings :Int) -> Int
     }
 
 }
-    
 
 
 print(simpleMethoud(5))
 print(simpleMethoud(-48))
 
+
+class SimpleClass
+{
+    //Declaration Section
+    var name :String
+    var age :Int
+    var isTired :Bool
+    
+    init()
+    {
+        self.name = String()
+        self.age = -99
+        self.isTired = true
+    }
+    
+    convenience init(name:String)
+    {
+        self.init()
+        self.name = name
+    }
+    
+    convenience init(name :String, age :Int)
+    {
+        self.init()
+        self.name = name
+        self.age = age
+    }
+    
+}
+
+var someInstance = SimpleClass()
+print(someInstance.name)
+var otherInstance = SimpleClass(name: "Derf")
+print(otherInstance.name)
+var anotherInstance = SimpleClass(name: "Man",age: 45)
+print(anotherInstance.age)
